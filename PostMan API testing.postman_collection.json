@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "0109e006-deb9-4e53-9a07-88af90f37c5a",
+		"name": "PostMan API testing",
+		"description": "# 🧪 Get started here\n\nPostman's powerful [scripting feature](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) helps you to write a range of API tests in JavaScript, including integration, regression, and contract tests.\n\nThis template demonstrates how to work with the Postman basic test syntax to test a single HTTP API request.\n\n## 🔖 How to use this template?\n\n#### Step 1: Send requests\n\nSend the sample requests and view the response and test results.\n\n#### Step 2: Update the sample request URL\n\nReplace the sample request URLs with your desired API endpoints.\n\n#### Step 3: Customize tests\n\nCustomize the tests in the \"Tests\" tab if needed. Don't forget to save your changes.\n\n## 💪 Quick tips for writing tests\n\n- Organize your test scenarios by grouping your requests in [collections](https://www.getpostman.com/docs/v6/postman/collections/intro_to_collections) and [folders](https://www.getpostman.com/docs/v6/postman/collections/managing_collections#adding-folders), and naming them descriptively\n- Document your API’s requirements using [markdown in the descriptions](https://www.getpostman.com/docs/v6/postman/collections/using_markdown_for_descriptions)\n- Use [variables](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables) to simulate more sophisticated user flows\n- Common tests that will be run after every request can be added to collection-level tests or folder-level tests\n    \n\n## 💡Related templates\n\n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54)  \n[REST API basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=ddb19591-3097-41cf-82af-c84273e56719&sourceTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54)  \n[Integration testing](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=fe506090-ca91-4340-bea9-82d2c3d2bb9a&sourceTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54)  \n[Regression testing](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=7ab0f80e-a964-46ee-b948-4a4e3a85809c&sourceTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31002769"
+	},
+	"item": [
+		{
+			"name": "GOALS_API",
+			"item": [
+				{
+					"name": "goal_0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/goals/0",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"goals",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "goal_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/goals",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"goals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "goal_1_70p",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/goals/1/progress?progress=0.7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"goals",
+								"1",
+								"progress"
+							],
+							"query": [
+								{
+									"key": "progress",
+									"value": "0.7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "goal_8",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/goals/8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"goals",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "goal_2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/goals/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"goals",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder helps you understand how to work with the [Postman Sandbox](https://www.getpostman.com/docs/v6/postman/scripts/postman_sandbox), a JavaScript execution environment that is accessible during pre-request scripts and test scripts.\n\nWhatever code you write under the pre-request and test tabs is executed in this sandbox.\n\nAny code that you write under the \"Tests\" tab, in the Postman app will execute after your request.\n\nConsequently, you have access to the `pm.response` object to make assertions against the actual response -- this is what we call a Postman test.\n\nReview the example tests under the \"Tests\" tab.\n\n**Quick tips for syntax**\n\n- Give each test a descriptive name. When the test fails, this will provide context to the error.\n- Use `pm.response()` as your base assertion, where possible, to provide more descriptive error messages.\n- Use the optional secnd parameter in `pm.expect()` to create custom error messages.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "DogButCat_API",
+			"item": [
+				{
+					"name": "CatNotBreed",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{x-key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.thecatapi.com/v1/images/search?breed_ids=beng&include_breeds=false",
+							"protocol": "https",
+							"host": [
+								"api",
+								"thecatapi",
+								"com"
+							],
+							"path": [
+								"v1",
+								"images",
+								"search"
+							],
+							"query": [
+								{
+									"key": "breed_ids",
+									"value": "beng"
+								},
+								{
+									"key": "include_breeds",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CatById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"",
+									"  var jsonData = pm.response.json();",
+									"  ",
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response should be okay to process\", function () { ",
+									"    pm.response.to.not.be.error; ",
+									"    pm.response.to.not.have.jsonBody(\"error\"); ",
+									"});",
+									"",
+									"pm.test('Object response', function() {",
+									"  pm.expect(jsonData.id).to.equal('MjAzMDMwMg'); ",
+									"  pm.expect(jsonData.url).to.equal(\"https://cdn2.thecatapi.com/images/MjAzMDMwMg.jpg\"); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{x-key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{YOUR-API-KEY}}",
+								"description": "[optional]  will save this request to your account analytics\n"
+							}
+						],
+						"url": {
+							"raw": "https://api.thecatapi.com/v1/images/:image_id?sub_id&size&include_vote=&include_favourite",
+							"protocol": "https",
+							"host": [
+								"api",
+								"thecatapi",
+								"com"
+							],
+							"path": [
+								"v1",
+								"images",
+								":image_id"
+							],
+							"query": [
+								{
+									"key": "sub_id",
+									"value": null,
+									"description": "[optional] if you want to save this request to your account stats"
+								},
+								{
+									"key": "size",
+									"value": null,
+									"description": "[optional] thumb , small, med or full - small is perfect for Discord"
+								},
+								{
+									"key": "include_vote",
+									"value": "",
+									"description": "[optional] include the last Vote for the Image from your account & sub_id"
+								},
+								{
+									"key": "include_favourite",
+									"value": null,
+									"description": "[optional] include the Favourite for the Image from your account & sub_id"
+								}
+							],
+							"variable": [
+								{
+									"key": "image_id",
+									"value": "MjAzMDMwMg",
+									"description": "The id of the image to get"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FavouriteDog",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{x-key}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{YOUR-API-KEY}}",
+								"description": "[required]"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"image_id\":\"In0G1ek$@\",\n\t\"sub_id\":\"CT-7567\"\n}"
+						},
+						"url": {
+							"raw": "https://api.thedogapi.com/v1/favourites",
+							"protocol": "https",
+							"host": [
+								"api",
+								"thedogapi",
+								"com"
+							],
+							"path": [
+								"v1",
+								"favourites"
+							]
+						},
+						"description": "\n\n#### POST Body Parameters\n\n| Key  | Required | Description                                                                                     |\n|------|----------|-------------------------------------------------------------------------------------------------|\n| image_id | required | The id of the image to favourite.\n| sub_id | optional | A custom value you can set yourself, and then use to split the results of GET /favourites by, e.g. your own user's id.                                                    |"
+					},
+					"response": []
+				},
+				{
+					"name": "VoteForDog/NoPUT",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{x-key}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{YOUR-API-KEY}}",
+								"description": "[required]"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"image_id\":\"In0G1ek$@\",\n\t\"sub_id\": \"CT-7567\",\n\t\"value\":1\n}"
+						},
+						"url": {
+							"raw": "https://api.thedogapi.com/v1/votes",
+							"protocol": "https",
+							"host": [
+								"api",
+								"thedogapi",
+								"com"
+							],
+							"path": [
+								"v1",
+								"votes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FavouriteDog",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{x-key}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{YOUR-API-KEY}}",
+								"description": "[required]"
+							}
+						],
+						"url": {
+							"raw": "https://api.thedogapi.com/v1/favourites/:favourite_id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"thedogapi",
+								"com"
+							],
+							"path": [
+								"v1",
+								"favourites",
+								":favourite_id"
+							],
+							"variable": [
+								{
+									"key": "favourite_id",
+									"value": "jakiesid2187"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains examples of testing a single HTTP API request.\n\nIn the Postman app, under the \"Tests\" tab for each request, notice the test(s) written to validate specific assertions. Some of these tests are available as a \"Snippet\" on the right sidebar.\n\nSend each request to see the results under the \"Test Results\" tab in the response viewer.",
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "key",
+						"value": "x-api-key",
+						"type": "string"
+					},
+					{
+						"key": "value",
+						"value": "{{x-key}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
